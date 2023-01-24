@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Node2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://gfx/FirstHulk.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+StartXP = 0.142458
+LevelCurve = 0.266159
+BannerEmblem = [ ExtResource( 2 ), ExtResource( 3 ) ]
+Vec3s = PoolColorArray( 1, 0.0117647, 0.0117647, 1, 0.690196, 0.843137, 0.670588, 1 )
+
+[node name="OOZE" type="OOZE" parent="."]

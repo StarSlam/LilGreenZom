@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Buildings.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gfx/light_circle.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/FirstHulk.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gfx/snowscape_child1.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SnowscapeChild1" type="Sprite" parent="."]
+light_mask = 0
+position = Vector2( 257, 147 )
+scale = Vector2( 0.517864, 0.302535 )
+texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Buildings" type="Node" parent="Camera2D"]
+
+[node name="Node2D" parent="Camera2D/Buildings" instance=ExtResource( 1 )]
+position = Vector2( 86, 203 )
+
+[node name="Node2D2" parent="Camera2D/Buildings" instance=ExtResource( 1 )]
+position = Vector2( 244, 203 )
+
+[node name="Node2D3" parent="Camera2D/Buildings" instance=ExtResource( 1 )]
+position = Vector2( 390, 228 )
+rotation = -3.14159
+scale = Vector2( 0.880227, -0.769541 )
+
+[node name="Node2D4" parent="Camera2D" instance=ExtResource( 3 )]
+position = Vector2( 161, 225 )
+z_index = 1
+
+[node name="Light2D" type="Light2D" parent="Camera2D"]
+position = Vector2( 325, 42 )
+texture = ExtResource( 2 )
+texture_scale = 10.24
+energy = 1.85
+range_height = 413.4
